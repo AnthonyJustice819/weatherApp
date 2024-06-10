@@ -1,53 +1,52 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="../script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather">
+        <form action="">
+          <input type="text" placeholder="Enter City Name" id="searchBox" />
+          <button type="submit" id="submit" id="submit">
+            <svg width="24" height="24" fill-rule="evenodd" clip-rule="evenodd">
+              <path
+                d="M15.853 16.56c-1.683 1.517-3.911 2.44-6.353 2.44-5.243 0-9.5-4.257-9.5-9.5s4.257-9.5 9.5-9.5 9.5 4.257 9.5 9.5c0 2.442-.923 4.67-2.44 6.353l7.44 7.44-.707.707-7.44-7.44zm-6.353-15.56c4.691 0 8.5 3.809 8.5 8.5s-3.809 8.5-8.5 8.5-8.5-3.809-8.5-8.5 3.809-8.5 8.5-8.5z"
+              />
+            </svg>
+          </button>
+        </form>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Weather App</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="../script.js" defer></script>
-</head>
-<body>
-  
-  <div class="weather-box">
-    <div>
-      <form action="">
-            <input type="text" placeholder="Enter City Name" id="search-box" spellcheck="false"><button type="submit" id="submit">Search</button>
-            <p class="error1">Enter City Name!!</p>
-            <p class="error2">Enter a Valid City Name!!</p>
-      </form>
-    
-    </div>
-<div class="weather-box-2">
-    <div class="weather-details">
-        <img src="" alt="weather-icon" class="weather-icon">
-         <p class="description">Description</p>
-              <p class="temp">20°c</p>
-      <h1>New York</h1>   
-        
-    </div>
-    
-    <div class="weather-details-2">
-      
-     <div class="col">
-       <img src="./images/wind.png" alt="wind-weather-icon">
-       <div>
-           <p class="wind">20 km/h</p>
-       <p>Wind</p>  
-       </div>
-   
-     </div>
+        <div class="weather-box">
+          <img src="" alt="" />
+          <h1 id="temp">22°c</h1>
+          <h1 id="city">New York</h1>
+          <p id="description">Description</p>
+        </div>
+
+        <div class="weather-detials">
           <div class="col">
-            <img src="./images/humidity.png" alt="humidity-weather-icon">
+            <img src="./images/wind.png" alt="" />
             <div>
-                 <p class="humidity">20%</p>
-            <p>Humidity</p>
+              <p id="wind">16km/h</p>
+                     <p>Wind Speed</p>
             </div>
-         
           </div>
+
+          <div class="col">
+            <img src="./images/humidity.png" alt="" />
+            <div>
+              <p id="humidity">70%</p>
+              <p>humidity</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
-</div>
-  </div>
-</body>
+  </body>
 </html>
