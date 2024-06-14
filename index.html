@@ -8,10 +8,16 @@
     <script src="../script.js" defer></script>
   </head>
   <body>
-    <div class="container">
+    <div class="wrapper">
       <div class="weather">
         <form action="">
-          <input type="text" placeholder="Enter City Name" id="searchBox" />
+          <input
+            type="text"
+            placeholder="Enter City Name"
+            id="searchBox"
+            required
+            autofocus
+          />
           <button type="submit" id="submit" id="submit">
             <svg width="24" height="24" fill-rule="evenodd" clip-rule="evenodd">
               <path
@@ -20,23 +26,24 @@
             </svg>
           </button>
         </form>
-
-        <div class="weather-box">
-          <img src="" alt="" />
+        <p class="enter">Enter City Name</p>
+       <p class="invalid">Invalid City Name</p>
+        <div class="container">
+ <div class="weather-box">
+          <img src="" alt="" id="img" />
           <h1 id="temp">22°c</h1>
           <h1 id="city">New York</h1>
           <p id="description">Description</p>
         </div>
-
+      
         <div class="weather-detials">
           <div class="col">
             <img src="./images/wind.png" alt="" />
             <div>
               <p id="wind">16km/h</p>
-                     <p>Wind Speed</p>
+              <p>Wind Speed</p>
             </div>
           </div>
-
           <div class="col">
             <img src="./images/humidity.png" alt="" />
             <div>
@@ -45,8 +52,12 @@
             </div>
           </div>
         </div>
+        </div>
+       
 
       </div>
     </div>
+
+        
   </body>
 </html>

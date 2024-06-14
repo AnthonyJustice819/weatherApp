@@ -1,13 +1,14 @@
 body {
-color: #fff;
+  background: #B4D5F9;
+  color: #fff;
 }
 .weather {
   background: linear-gradient(135deg, #00feba, #5b548a);
   width: 90%;
-  max-width: 470px;
+  max-width: 390px;
   text-align: center;
-  margin: 100px auto 0;
-  padding: 10px;
+  margin: 80px auto 0;
+  padding: 9px;
   border-radius: 10px;
 }
 form {
@@ -15,6 +16,7 @@ form {
   justify-content: space-between;
   align-items: center;
 }
+
 #searchBox {
   flex: 1;
   padding: 10px 20px;
@@ -31,25 +33,65 @@ form {
   cursor: pointer;
 }
 .weather-box {
-  line-height: 3em;
+  line-height: 2em;
+}
+.container {
+  display: none;
+}
+.enter, .invalid {
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: none;
+  color: red;
+  background: white;
+  border-radius: 5px;
+  margin: 10px 100px;
+  transform: translateX(100%);
+  animation: moveleft 0.5s linear forwards;
+
+}
+ @keyframes moveleft {
+   100% {
+    transform: translateX(0);
+   } 
+  }
+.enter::after, .invalid::after {
+  content: '';
+  display: block;
+  height: 5px; /* Height of the red background */
+  background-color: red; /* Color of the background */
+  margin-top: 5px; /* Space between the text and the red background */
+  width: 100%;
+  animation: anim 4s linear forwards;
+}
+@keyframes anim {
+  100% {
+    width: 0;
+  }
+}
+img {
+  width: 50%;
+  height: 50%;
 }
 .weather-detials {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-top: 5em;
+  margin-top: 0em;
+}
+#temp {
+  margin: 0;
 }
 #description {
   font-size: 20px;
 }
 .col {
-display: flex;
-align-items: center;
-padding: 5px;
-font-size: 17px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  font-size: 17px;
 }
 .col img {
   margin-right: 9px;
 }
-
